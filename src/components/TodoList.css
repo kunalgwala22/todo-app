@@ -1,0 +1,274 @@
+/* General Styling */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Header */
+header h1 {
+  margin: 0 0 10px;
+  color: skyblue;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: #333;
+  color: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: skyblue;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.edit-section {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-input {
+  width: 60%;
+}
+
+.save-btn {
+  background-color: green;
+  color: white;
+}
+
+
+/* 
+
+        body {
+          background-color: black;
+          color: white;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .todo-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #1e1e1e;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+          animation: fadeIn 1s ease-in-out;
+          width: 90%;
+          max-width: 400px;
+        }
+
+     
+        header h1 {
+          margin: 0 0 20px;
+          color: skyblue;
+          font-size: 24px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          animation: slideIn 0.8s ease-out;
+        }
+
+        
+        form {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        .input {
+          width: 70%;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+          background-color: #333;
+          color: white;
+        }
+
+        .input:focus {
+          border-color: skyblue;
+          box-shadow: 0 0 5px skyblue;
+        }
+
+        .btn {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: skyblue;
+          color: black;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+          background-color: #0077cc;
+        }
+
+     
+        ul {
+          list-style-type: none;
+          padding: 0;
+          width: 100%;
+        }
+
+        .todo-list {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          color: black;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          animation: popIn 0.3s ease-in-out;
+        }
+
+        .completed {
+          text-decoration: line-through;
+          color: gray;
+        }
+
+        .checkbox {
+          margin-right: 10px;  
+        }
+      
+
+        .delete-btn {
+          background-color: red;
+          color: white;
+          margin-left: 18rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          padding: 5px 10px;
+          font-size: 14px;
+          transition: background-color 0.3s;
+        }
+
+        .delete-btn:hover {
+          background-color: darkred;
+        }
+
+      
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes popIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      */
